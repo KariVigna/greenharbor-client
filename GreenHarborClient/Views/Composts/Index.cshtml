@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Composts";
+}
+
+@using GreenHarborClient.Models;
+
+<h1>Compost Host Sites</h1>
+
+@foreach (Compost compost in Model)
+{
+  <li><strong>@compost.Location</strong> by @compost.Zip | <a href="/composts/Details/@(compost.CompostId)">View Details</a></li>
+}
+
+<p>@Html.ActionLink("Add new Compost Host", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

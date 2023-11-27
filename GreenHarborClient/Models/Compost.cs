@@ -1,4 +1,8 @@
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace GreenHarborClient.Models
 {
@@ -6,6 +10,8 @@ namespace GreenHarborClient.Models
   {
     public int CompostId { get; set; }
     // [Required]
+    public string Zip { get; set; }
+    public string City { get; set; }
     public string Location { get; set; }
     // [Required]
     public string ContactName { get; set; }
@@ -26,7 +32,7 @@ namespace GreenHarborClient.Models
       return composts;
     }
 
-     public static Compost GetDetails(int id)
+    public static Compost GetDetails(int id)
     {
       Task<string> apiCallTask = ApiHelper.Get(id);
       string result = apiCallTask.Result;

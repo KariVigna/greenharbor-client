@@ -1,0 +1,14 @@
+@{
+    Layout = "_Layout";
+}
+
+@using GreenHarborClient.Models;
+@model GreenHarborClient.Models.Compost;
+
+<h2>Compost Host Details</h2>
+
+<h3>@Html.DisplayNameFor(model => model.Location): @Html.DisplayFor(model => model.Location)<br>
+@Html.DisplayNameFor(model => model.ContactName): @Html.DisplayFor(model => model.ContactName)</h3>
+</h3>
+
+@Html.ActionLink("Return to all compost hosts", "Index")

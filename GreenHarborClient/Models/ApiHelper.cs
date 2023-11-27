@@ -8,7 +8,7 @@ namespace GreenHarborClient.Models
     public static async Task<string> GetAll()
     {
       RestClient client = new RestClient("https://localhost:7099/");
-      RestRequest request = new RestRequest($"api/composts", Method.Get);
+      RestRequest request = new RestRequest($"api/Composts", Method.Get);
       RestResponse response = await client.GetAsync(request);
       return response.Content;
     }
@@ -17,7 +17,7 @@ namespace GreenHarborClient.Models
     {
       RestClient client = new RestClient("https://localhost:7099/");
       // may need to change
-      RestRequest request = new RestRequest($"api/composts/{id}", Method.Get);
+      RestRequest request = new RestRequest($"api/Composts/{id}", Method.Get);
       RestResponse response = await client.GetAsync(request);
       return response.Content;
     }
@@ -26,7 +26,7 @@ namespace GreenHarborClient.Models
     {
       RestClient client = new RestClient("https://localhost:7099/");
       // may need to change
-      RestRequest request = new RestRequest($"api/composts", Method.Post);
+      RestRequest request = new RestRequest($"api/Composts", Method.Post);
       request.AddHeader("Content-Type", "application/json");
       request.AddJsonBody(newCompost);
       await client.PostAsync(request);
@@ -36,7 +36,7 @@ namespace GreenHarborClient.Models
     {
       RestClient client = new RestClient("https://localhost:7099/");
       // may need to change
-      RestRequest request = new RestRequest($"api/composts/{id}", Method.Put);
+      RestRequest request = new RestRequest($"api/Composts/{id}", Method.Put);
       request.AddHeader("Content-Type", "application/json");
       request.AddJsonBody(newCompost);
       await client.PutAsync(request);
@@ -45,7 +45,7 @@ namespace GreenHarborClient.Models
     public static async void Delete(int id)
     {
       RestClient client = new RestClient("https://localhost:7099/");
-      RestRequest request = new RestRequest($"api/composts/{id}", Method.Delete);
+      RestRequest request = new RestRequest($"api/Composts/{id}", Method.Delete);
       request.AddHeader("Content-Type", "application/json");
       await client.DeleteAsync(request);
     }

@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Compost";
+}
+
+@model GreenHarborClient.Models.Compost
+
+<h2>Add New Compost Host</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Location)
+    @Html.TextBoxFor(model => model.Location)<br>
+
+    @Html.LabelFor(model => model.ContactName)
+    @Html.TextBoxFor(model => model.ContactName)<br>
+
+    @Html.LabelFor(model => model.ContactPhone)
+    @Html.TextBoxFor(model => model.ContactPhone)<br>
+
+    @Html.LabelFor(model => model.ContactEmail)
+    @Html.TextBoxFor(model => model.ContactEmail)<br>
+    
+    @Html.LabelFor(model => model.Contents)
+    @Html.TextBoxFor(model => model.Contents)
+
+    <input type="submit" value="Add new host" class="btn btn-default" />
+}
+
+<br />
+<p>@Html.ActionLink("Back to all hosts", "Index")</p>

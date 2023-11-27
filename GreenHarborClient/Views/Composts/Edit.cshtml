@@ -1,0 +1,21 @@
+@{
+    Layout = "_Layout";
+}
+
+@model GreenHarborClient.Models.Compost;
+
+<h2>Edit</h2>
+
+<h4>Edit this host: @Html.DisplayFor(model => model.Location)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.CompostId)
+
+    @Html.LabelFor(model => model.Location)
+    @Html.EditorFor(model => model.Location)
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
