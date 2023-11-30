@@ -1,10 +1,36 @@
 using Microsoft.AspNetCore.Mvc;
 using GreenHarborClient.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Identity;
 
-namespace GreenHarborClient.Controllers;
-
+namespace GreenHarborClient.Controllers
+{
+  [Authorize]
 public class CompostsController : Controller
 {
+  private readonly GreenHarborClientContext _db;
+  private readonly UserManager<ApplicationUser> _userManager;
+
+  public CompostsController(UserManager<ApplicationUser> userManager, GreenHarborClientContext db)
+  {
+    _userManager = userManager;
+    _db = db;
+  }
+  public ActionResult Create()
+  {
+    return View();
+  }
+
+
+  [HttpPost]
+  public ActionResult Create(Compost compost)
+  {
+    Compost.Post(compost);
+    return RedirectToAction("Index");
+  }
+
   public IActionResult Index()
   {
     List<Compost> composts = Compost.GetComposts();
@@ -17,19 +43,9 @@ public class CompostsController : Controller
     return View(compost);
   }
 
-  public ActionResult Create()
-  {
-    return View();
-  }
 
-  [HttpPost]
-  public ActionResult Create(Compost compost)
-  {
-    Compost.Post(compost);
-    return RedirectToAction("Index");
-  }
 
-   public ActionResult Edit(int id)
+  public ActionResult Edit(int id)
   {
     Compost compost = Compost.GetDetails(id);
     return View(compost);
@@ -39,7 +55,7 @@ public class CompostsController : Controller
   public ActionResult Edit(Compost compost)
   {
     Compost.Put(compost);
-    return RedirectToAction("Details", new { id = compost.CompostId});
+    return RedirectToAction("Details", new { id = compost.CompostId });
   }
 
   public ActionResult Delete(int id)
@@ -54,4 +70,7 @@ public class CompostsController : Controller
     Compost.Delete(id);
     return RedirectToAction("Index");
   }
+
 }
+}
+
