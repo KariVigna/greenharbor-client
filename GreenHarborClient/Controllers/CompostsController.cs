@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GreenHarborClient.Controllers
 {
-  [Authorize]
+[Authorize]
 public class CompostsController : Controller
 {
   private readonly GreenHarborClientContext _db;
