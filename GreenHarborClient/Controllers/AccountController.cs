@@ -8,16 +8,15 @@ namespace GreenHarborClient.Controllers
 {
   public class AccountController : Controller
   {
-    //this may need to change and add back into line 16
-    // private readonly GreenHarborContext _db;
+    private readonly GreenHarborClientContext _db;
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
 
-    public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+    public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, GreenHarborClientContext db)
     {
       _userManager = userManager;
       _signInManager = signInManager;
-      // _db = db;
+      _db = db;
     }
 
     public ActionResult Index()
