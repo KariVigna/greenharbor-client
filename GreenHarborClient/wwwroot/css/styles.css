@@ -1,0 +1,57 @@
+div#footer {
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    color:#ffffff;
+    background:#436033;
+    padding:8px;
+}
+
+a {
+    color: #CCCccc;
+    font-weight: bold;
+}
+
+html {
+    height: 100%;
+}
+
+.jumbotron {
+    /* background-color: #8cb570; */
+    background: linear-gradient(#8cb570, #436033);
+    color: #ffffff;
+}
+
+body {
+    background-image: url("img/treebg.jpeg");
+    background-size: cover;
+}
+
+.container1 {
+    width: 400px;
+    height: 100%;
+    padding: 30px;
+    border-style: double;
+    border-color: black;
+    border-radius: 30px;
+    border-width: 10px;
+    background: linear-gradient(#8cb570, #436033);
+    color: black;
+}
+
+.container-home {
+    width: 400px;
+    height: 100%;
+    padding: 30px;
+    border-style: double;
+    border-color: black;
+    border-radius: 30px;
+    border-width: 10px;
+    background: linear-gradient(#8cb570, #436033);
+}
+
+.italic {
+    font-style: italic;
+}
+

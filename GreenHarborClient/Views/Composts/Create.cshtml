@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Compost";
+}
+
+@using GreenHarborClient.Models;
+@model GreenHarborClient.Models.Compost;
+
+<h2>Become a Compost Host</h2>
+
+<div class="container1">
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Location) 
+    @Html.TextBoxFor(model => model.Location)<br>
+
+    @Html.LabelFor(model => model.Zip)
+    @Html.TextBoxFor(model => model.Zip)<br>
+
+    @Html.LabelFor(model => model.City)
+    @Html.TextBoxFor(model => model.City)<br>
+
+    @Html.LabelFor(model => model.ContactName)
+    @Html.TextBoxFor(model => model.ContactName)<br>
+
+    @Html.LabelFor(model => model.ContactPhone)
+    @Html.TextBoxFor(model => model.ContactPhone)<br>
+
+    @Html.LabelFor(model => model.ContactEmail)
+    @Html.TextBoxFor(model => model.ContactEmail)<br>
+    
+    @Html.LabelFor(model => model.Contents)
+    @Html.TextBoxFor(model => model.Contents)
+
+    <input type="submit" value="Add new host" class="btn btn-default" />
+}
+</div>
+
+<br />
+<p>@Html.ActionLink("Back to all hosts", "Index")</p>

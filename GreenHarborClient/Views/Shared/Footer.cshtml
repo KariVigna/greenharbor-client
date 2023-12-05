@@ -1,0 +1,15 @@
+<div id="footer">
+  @Html.ActionLink("Home", "Index", "Home") |
+  @Html.ActionLink("View our composters", "Index", "Composts") |
+  @Html.ActionLink("Our Mission", "Index", "Info") |
+  @Html.ActionLink("Log In", "Login", "Account") |
+  @Html.ActionLink("Sign Up", "Register", "Account") |
+  @if (User.Identity.IsAuthenticated)
+  {
+    <p>Sign out @User.Identity.Name</p>
+    @using (Html.BeginForm("LogOff", "Account"))
+    {
+      <input type="submit" class="btn btn-primary" value="Log out" />
+    }
+  }
+</div>

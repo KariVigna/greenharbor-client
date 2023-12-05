@@ -1,0 +1,20 @@
+@{
+    Layout = "_Layout";
+}
+
+@using GreenHarborClient.Models;
+
+<h4>Search by City</h4>
+
+<form asp-action="IndexByCity" method="get">
+  <p>
+      <input type="text" name="city" value="@ViewData["City"]" />
+      <input type="submit" value="Search" class="btn" />
+      <a asp-action="Index">Back to Index</a>
+  </p>
+</form>
+
+@foreach (Compost compost in Model)
+{
+  <li><strong>@compost.Location</strong>, @compost.Zip | <a href="/composts/Details/@(compost.CompostId)">View Details</a></li>
+}
