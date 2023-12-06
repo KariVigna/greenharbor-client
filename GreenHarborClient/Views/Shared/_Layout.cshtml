@@ -19,15 +19,15 @@
     <body>
         <center>
         <div class="jumbotron text-center">
-        <h1 class ="text-flicker-in-glow">Green Harbor</h1>
-        <p>Connecting people to piles since 2023</p>
+        <h1 class ="jello-horizontal">Green Harbor</h1>
+        <p class="slide-in-bck-bottom">Connecting people to piles since 2023</p>
+        <img class="img-left" src="./wwwroot/css/img/dirt.jpeg">
         @Html.ActionLink("Home", "Index", "Home") | 
         @Html.ActionLink("Find a Composter", "Index", "Composts") |
         @Html.ActionLink("Our Mission", "Index", "Info") | 
-
+        <br>
         @if (User.Identity.IsAuthenticated)
         {
-            <p>Log out @User.Identity.Name:</p>
             @using (Html.BeginForm("LogOff", "Account"))
             {
                 <input type="submit" class="btn btn-primary" value="Log out" />
@@ -37,6 +37,7 @@
         {
             @Html.ActionLink("Log In | Register", "Index", "Account")
         }
+        <img class="img-right" src="./wwwroot/css/img/veg.jpeg">
         </div>
         @RenderBody()
         @await Html.PartialAsync("Footer")

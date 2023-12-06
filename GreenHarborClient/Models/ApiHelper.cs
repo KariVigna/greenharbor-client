@@ -33,7 +33,7 @@ namespace GreenHarborClient.Models
     public static async Task<string> GetByCity(string city)
     {
       RestClient client = new RestClient("https://localhost:7000/");
-      RestRequest request = new RestRequest($"api/composts?zip={city}", Method.Get);
+      RestRequest request = new RestRequest($"api/composts?city={city}", Method.Get);
       RestResponse response = await client.GetAsync(request);
       return response.Content;
     }

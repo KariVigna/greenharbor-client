@@ -6,11 +6,7 @@
 @if (User.Identity.IsAuthenticated)
 {
   <p>Hello @User.Identity.Name!</p>
-  @using (Html.BeginForm("LogOff", "Account"))
-  {
-    <input type="submit" class="btn btn-primary" value="Log out" /><br>
-    @Html.ActionLink("Let's Compost!", "Index", "Composts") 
-  }
+  @Html.ActionLink("Let's Compost!", "Index", "Composts") 
 }
 else
 {

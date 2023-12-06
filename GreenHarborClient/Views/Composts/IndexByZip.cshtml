@@ -11,12 +11,13 @@
   <p>
       <input type="text" name="zip" value="@ViewData["Zip"]" />
       <input type="submit" value="Search" class="btn" />
-      <a asp-action="Index">Back to Index</a>
   </p>
 </form>
 
 @foreach (Compost compost in Model)
 {
-  <li><strong>@compost.Location</strong>, @compost.Zip | <a href="/composts/Details/@(compost.CompostId)">View Details</a></li>
+  <li><strong>@compost.ContactName</strong> - @compost.Zip - @compost.Location - @compost.City | <a href="/composts/Details/@(compost.CompostId)">View Details</a></li>
 }
+
+<p>@Html.ActionLink("Back to Index", "Index")</p>
 </div>

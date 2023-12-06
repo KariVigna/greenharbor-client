@@ -146,4 +146,87 @@ body {
     border-radius: 30px;
     border-width: 10px;
     background: linear-gradient(#8cb570, #436033);
+    font-size: 18px;
 }
+
+#list {
+  text-align: left;
+  margin-left: 200px;
+  font-size: 19px;
+  font-style: italic;
+}
+
+#num-list {
+  text-align: left;
+  margin-left: 60px;
+}
+
+.mission {
+  font-size: 20px;
+  color: rgb(146, 216, 77);
+}
+
+.slide-in-bck-bottom {
+	-webkit-animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-bottom 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-bck-bottom {
+        0% {
+          -webkit-transform: translateZ(700px) translateY(300px);
+                  transform: translateZ(700px) translateY(300px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateZ(0) translateY(0);
+                  transform: translateZ(0) translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-bck-bottom {
+        0% {
+          -webkit-transform: translateZ(700px) translateY(300px);
+                  transform: translateZ(700px) translateY(300px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateZ(0) translateY(0);
+                  transform: translateZ(0) translateY(0);
+          opacity: 1;
+        }
+      }
+
+.kenburns-top {
+-webkit-animation: kenburns-top 4s ease-out both;
+        animation: kenburns-top 4s ease-out both;
+}
+
+@-webkit-keyframes kenburns-top {
+        0% {
+          -webkit-transform: scale(1) translateY(0);
+                  transform: scale(1) translateY(0);
+          -webkit-transform-origin: 50% 16%;
+                  transform-origin: 50% 16%;
+        }
+        100% {
+          -webkit-transform: scale(1.25) translateY(-15px);
+                  transform: scale(1.25) translateY(-15px);
+          -webkit-transform-origin: top;
+                  transform-origin: top;
+        }
+      }
+      @keyframes kenburns-top {
+        0% {
+          -webkit-transform: scale(1) translateY(0);
+                  transform: scale(1) translateY(0);
+          -webkit-transform-origin: 50% 16%;
+                  transform-origin: 50% 16%;
+        }
+        100% {
+          -webkit-transform: scale(1.25) translateY(-15px);
+                  transform: scale(1.25) translateY(-15px);
+          -webkit-transform-origin: top;
+                  transform-origin: top;
+        }
+      }
+      
