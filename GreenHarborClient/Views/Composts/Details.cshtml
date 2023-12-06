@@ -5,15 +5,17 @@
 @using GreenHarborClient.Models;
 @model GreenHarborClient.Models.Compost;
 
+<div class="container1">
 <h2>Compost Host Details</h2>
 
-<h3>@Html.DisplayNameFor(model => model.City): @Html.DisplayFor(model => model.City)
-    @Html.DisplayNameFor(model => model.Zip): @Html.DisplayFor(model => model.Zip)
+<h4>@Html.DisplayNameFor(model => model.City): @Html.DisplayFor(model => model.City)<br>
+    @Html.DisplayNameFor(model => model.Zip): @Html.DisplayFor(model => model.Zip)<br>
     @Html.DisplayNameFor(model => model.Location): @Html.DisplayFor(model => model.Location)<br>
-    @Html.DisplayNameFor(model => model.Contents): @Html.DisplayFor(model => model.Contents)
+    @Html.DisplayNameFor(model => model.Contents): @Html.DisplayFor(model => model.Contents)<br>
     @Html.DisplayNameFor(model => model.ContactName): @Html.DisplayFor(model => model.ContactName)</h3>
-</h3>
+</h4>
 
-@Html.ActionLink("Return to all compost hosts", "Index")
+<p>@Html.ActionLink("Return to all compost hosts", "Index")</p>
 <p>@Html.ActionLink("Edit Compost Host", "Edit", new { id = Model.CompostId })</p>
 <p>@Html.ActionLink("Delete Compost Host", "Delete", new { id = Model.CompostId })</p>
+</div>

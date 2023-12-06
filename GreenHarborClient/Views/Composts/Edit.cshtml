@@ -3,19 +3,32 @@
 }
 
 @model GreenHarborClient.Models.Compost;
-
+<div class="container1">
 <h2>Edit</h2>
-
-<h4>Edit this host: @Html.DisplayFor(model => model.Location)</h4>
+<h4>Edit this host: @Html.DisplayFor(model => model.ContactName)</h4>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.CompostId)
 
+    @Html.LabelFor(model => model.ContactName)
+    @Html.EditorFor(model => model.ContactName)<br>
+    @Html.LabelFor(model => model.ContactPhone)
+    @Html.EditorFor(model => model.ContactPhone)<br>
+    @Html.LabelFor(model => model.ContactEmail)
+    @Html.EditorFor(model => model.ContactEmail)<br>
+    @Html.LabelFor(model => model.City)
+    @Html.EditorFor(model => model.City)<br>
+    @Html.LabelFor(model => model.Zip)
+    @Html.EditorFor(model => model.Zip)<br>
+    @Html.LabelFor(model => model.Contents)
+    @Html.EditorFor(model => model.Contents)<br>
     @Html.LabelFor(model => model.Location)
-    @Html.EditorFor(model => model.Location)
+    @Html.EditorFor(model => model.Location)<br>
+
 
     <input type="submit" value="Save" />
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
+</div>

@@ -1,15 +1,17 @@
 <div id="footer">
-  @Html.ActionLink("Home", "Index", "Home") |
-  @Html.ActionLink("View our composters", "Index", "Composts") |
-  @Html.ActionLink("Our Mission", "Index", "Info") |
-  @Html.ActionLink("Log In", "Login", "Account") |
-  @Html.ActionLink("Sign Up", "Register", "Account") |
-  @if (User.Identity.IsAuthenticated)
-  {
-    <p>Sign out @User.Identity.Name</p>
+<!-- @Html.ActionLink("Home", "Index", "Home") | 
+@Html.ActionLink("Find a Composter", "Index", "Composts") |
+@Html.ActionLink("Our Mission", "Index", "Info") | 
+
+@if (User.Identity.IsAuthenticated)
+{
     @using (Html.BeginForm("LogOff", "Account"))
     {
-      <input type="submit" class="btn btn-primary" value="Log out" />
+        <input type="submit" class="btn btn-primary" value="Log out" />
     }
-  }
+}
+else
+{
+    @Html.ActionLink("Log In | Register", "Index", "Account")
+} -->
 </div>

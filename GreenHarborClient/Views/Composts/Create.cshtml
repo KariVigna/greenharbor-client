@@ -1,13 +1,13 @@
 @{
-    ViewData["Title"] = "Compost";
+    Layout = "_Layout";
 }
 
 @using GreenHarborClient.Models;
 @model GreenHarborClient.Models.Compost;
 
+<div class="container1">
 <h2>Become a Compost Host</h2>
 
-<div class="container1">
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Location) 
@@ -33,7 +33,7 @@
 
     <input type="submit" value="Add new host" class="btn btn-default" />
 }
-</div>
 
 <br />
 <p>@Html.ActionLink("Back to all hosts", "Index")</p>
+</div>

@@ -1,14 +1,11 @@
 @{
-    ViewData["Title"] = "Composts";
+    Layout = "_Layout";
 }
 
 @using GreenHarborClient.Models;
 
-<p>@Html.ActionLink("Search by zip code", "IndexByZip")</p>
-
-<p>@Html.ActionLink("Search by city", "IndexByCity")</p>
-
-<h1>Compost Host Sites:</h1>
+<div class="container1">
+<h1>Compost Host Sites</h1>
 
 @foreach (Compost compost in Model)
 {
@@ -16,3 +13,8 @@
 }
 
 <p>@Html.ActionLink("Add new Compost Host", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+Search by @Html.ActionLink("City", "IndexByCity") or by 
+@Html.ActionLink("Zip Code", "IndexByZip")
+</div>

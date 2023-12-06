@@ -4,7 +4,8 @@
 
 @using GreenHarborClient.Models;
 
-<h4>Search by Zip Code</h4>
+<div class="container1">
+<h2>Search by Zip Code</h2>
 
 <form asp-action="IndexByZip" method="get">
   <p>
@@ -18,3 +19,4 @@
 {
   <li><strong>@compost.Location</strong>, @compost.Zip | <a href="/composts/Details/@(compost.CompostId)">View Details</a></li>
 }
+</div>

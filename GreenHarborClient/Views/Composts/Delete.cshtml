@@ -4,11 +4,13 @@
 
 @model GreenHarborClient.Models.Compost;
 
+<div class="container1">
 <h2>Delete this host?</h2>
 
-@Html.DisplayNameFor(model => model.Location): @Html.DisplayFor(model => model.Location)
+<h4>@Html.DisplayNameFor(model => model.Location): @Html.DisplayFor(model => model.Location)</h4>
 @using (Html.BeginForm())
 {
     <input type="submit" value="Delete" />
 }
 @Html.ActionLink("Back to List", "Index")
+</div>

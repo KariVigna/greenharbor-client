@@ -27,15 +27,12 @@ public class CompostsController : Controller
   [HttpPost]
   public ActionResult Create(Compost compost)
   {
-    if(!ModelState.IsValid){
+    if(!ModelState.IsValid)
+    {
       return View("Index");
     }
-    // if (ModelState.IsValid)
-    // {
     Compost.Post(compost);
     return RedirectToAction("Index");
-    // }
-    // return View(compost);
   }
 
   public IActionResult Index()
