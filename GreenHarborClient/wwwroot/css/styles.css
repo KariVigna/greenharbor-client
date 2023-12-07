@@ -118,6 +118,28 @@ html {
     color: #ffffff;
 }
 
+/* .img1::before {
+  content:url("img/dirtt.jpeg");
+  transform: rotate(90deg);
+} */
+
+.img2::before{
+ content:url("img/bugg.gif");
+ transform: rotate(90deg);
+ float: center;
+ margin-left: 40px;
+ margin-right: 0;
+ margin-top: 20px;
+ max-width: 10%;
+}
+
+.img3::before {
+  content:url("img/burnn.jpeg");
+  max-width: 100px;
+  height: 200px;
+  text-align: center;
+}
+
 body {
     background-image: url("img/treebg.jpeg");
     background-size: cover;
@@ -164,6 +186,14 @@ body {
 .mission {
   font-size: 20px;
   color: rgb(146, 216, 77);
+}
+
+.head {
+  padding: 40px;
+}
+
+#shiny {
+  width: 150px
 }
 
 .slide-in-bck-bottom {

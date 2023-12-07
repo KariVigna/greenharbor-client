@@ -19,9 +19,10 @@
     <body>
         <center>
         <div class="jumbotron text-center">
+        <div class="img1"></div>
         <h1 class ="jello-horizontal">Green Harbor</h1>
         <p class="slide-in-bck-bottom">Connecting people to piles since 2023</p>
-        <img class="img-left" src="./wwwroot/css/img/dirt.jpeg">
+        @* <img class="img-left" src="@Url.Content(~/css/img/veggeee.jpeg")"> *@
         @Html.ActionLink("Home", "Index", "Home") | 
         @Html.ActionLink("Find a Composter", "Index", "Composts") |
         @Html.ActionLink("Our Mission", "Index", "Info") | 
@@ -37,7 +38,7 @@
         {
             @Html.ActionLink("Log In | Register", "Index", "Account")
         }
-        <img class="img-right" src="./wwwroot/css/img/veg.jpeg">
+        <!-- <img class="img-right" src="~/images/veggeee.jpeg"> -->
         </div>
         @RenderBody()
         @await Html.PartialAsync("Footer")
