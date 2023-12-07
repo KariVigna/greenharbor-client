@@ -118,27 +118,21 @@ html {
     color: #ffffff;
 }
 
-/* .img1::before {
-  content:url("img/dirtt.jpeg");
-  transform: rotate(90deg);
-} */
-
 .img2::before{
  content:url("img/bugg.gif");
  transform: rotate(90deg);
- float: center;
+ /* float: center;
  margin-left: 40px;
  margin-right: 0;
  margin-top: 20px;
- max-width: 10%;
+ max-width: 10%; */
 }
 
-.img3::before {
+/* .img3::before {
   content:url("img/burnn.jpeg");
-  max-width: 100px;
-  height: 200px;
-  text-align: center;
-}
+  max-width: 100%;
+  height: auto;
+} */
 
 body {
     background-image: url("img/treebg.jpeg");
