@@ -2,7 +2,7 @@
 
 #### By _**Kari Vigna, Jessica Hattig, Will Jolley, Greg Stillwell, Mac Granger**_
 
-#### _An MVC C# client-side web application leveraging an API for the storage and retrieval of composting host information._
+#### _An MVC C# client-side web application leveraging [greenharborAPI](https://github.com/KariVigna/greenharborAPI) for the storage and retrieval of composting host information._
 
 ## Technologies Used
 
